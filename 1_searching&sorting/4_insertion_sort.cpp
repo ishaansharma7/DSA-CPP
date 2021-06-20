@@ -30,5 +30,5 @@ void insertion_sort(ll arr[], size_t arr_len){
 }
 
 /* Insertion sort works like sorting cards we start from second item and check wheather it is smaller
-then previous card if it is we place it before the previous card. So in array there is a sorted
+then previous card, if it is we place it before the previous card. So in array there is a sorted
 section and an unsorted section */
