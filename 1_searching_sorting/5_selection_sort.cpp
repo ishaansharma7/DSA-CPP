@@ -43,7 +43,8 @@ void swap(ll &a, ll &b){
     b = temp;
 }
 
-/* Working- it finds minimum value in array and push it to begining
+/* Working- it finds minimum value in array and swap it to begining, then ignores the swapped items
+and work on items left in array
 
 arr[] = 64 25 12 22 11
 
