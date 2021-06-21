@@ -24,7 +24,6 @@ void merge_sort(ll arr[], ll l, ll r){
     ll mid = (l+r)/2;
     merge_sort(arr, l, mid);
     merge_sort(arr, mid+1, r);
-    // cout<<"l: "<<l<<", mid: "<<mid<<", r: "<<r<<", END ";
     merge(arr, l, mid, r);
 }
 
@@ -71,3 +70,15 @@ void merge(ll arr[], ll l, ll mid, ll r){
         k++;
     }
 }
+/*
+MergeSort(arr[], l,  r)
+If r > l
+     1. Find the middle point to divide the array into two halves:  
+             middle m = (l+r)/2
+     2. Call mergeSort for first half:   
+             Call mergeSort(arr, l, m)
+     3. Call mergeSort for second half:
+             Call mergeSort(arr, m+1, r)
+     4. Merge the two halves sorted in step 2 and 3:
+             Call merge(arr, l, m, r)
+*/
