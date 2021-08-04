@@ -14,7 +14,6 @@ ll gridtraveller(ll r, ll c, unordered_map<string, ll>&mymap){
 
 int main(){
     unordered_map<string, ll>mymap;
-    // unordered_map<vector<int>, int>mymap;
     ll r,c;
     cin>>r>>c;
     cout<<gridtraveller(r,c, mymap);
