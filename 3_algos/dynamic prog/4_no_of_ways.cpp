@@ -18,10 +18,10 @@ int main(){
         vec.push_back(t);
     }
     vector<vector<ll>>dp(len, vector<ll>(targetSum+1, 0));
-    for(auto &v:dp)v[0]=1;
-    for(int i{0};i<dp.size();i++){
-        for(int j{1};j<dp[0].size();j++){
-            if(i==0){
+    for(auto &v:dp)v[0]=1;                  // generating zero in one way for all denominations
+    for(int i{0};i<dp.size();i++){          // for denominations
+        for(int j{1};j<dp[0].size();j++){   // for current target sum
+            if(i==0){                       // for first row/denomination
                 if(vec[i]>j){dp[i][j]=0;continue;}
                 int col=j-vec[i];
                 dp[i][j]=dp[i][col];

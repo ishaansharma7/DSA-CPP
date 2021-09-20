@@ -1,4 +1,7 @@
-def recursion(target_sum, vec: list):
+# best way
+def recursion(target_sum, vec: list, memo: dict={}):
+    if target_sum in memo:
+        return memo[target_sum]
     if target_sum == 0:
         return []
     if target_sum < 0:
@@ -6,11 +9,12 @@ def recursion(target_sum, vec: list):
     shortest_combination = None
     for each in vec:
         rem = target_sum - each
-        remainder_combination = recursion(rem, vec)
+        remainder_combination = recursion(rem, vec, memo)
         if remainder_combination != None:
             combination = remainder_combination + [each]
             if shortest_combination == None or len(combination) < len(shortest_combination):
                 shortest_combination = combination
+    memo[target_sum] = shortest_combination
     return shortest_combination
 
 
