@@ -1,10 +1,11 @@
+// adjacency list input
 #include<bits/stdc++.h>
 using namespace std;
 
 int main(){
     int v,e;
     cin>>v>>e;
-    vector<vector<int>>adlist(v+1, vector<int>());
+    vector<vector<int>>adlist(v+1);
     for(int i=0;i<e;i++){
         int x,y;
         cin>>x>>y;
